@@ -1,0 +1,13 @@
+
+<section cdkDropListOrientation="vertical" cdkDropList (cdkDropListDropped)="dropItem($event)">
+  <div class="item" *ngFor="let m of movies" cdkDragLockAxis="y" cdkDrag>
+    <span class="draggable" cdkDragHandle>
+      ⋮⋮
+    </span>
+
+    <h2>
+      {{ m }}
+    </h2>
+  </div>
+
+</section>

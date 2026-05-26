@@ -1,0 +1,83 @@
+[
+  {
+    "id": "todo",
+    "title": "To Do",
+    "tickets": [
+      {
+        "id": "task-1",
+        "title": "Configurar entorno de desarrollo",
+        "description": "Instalar Angular, configurar Bun y verificar dependencias",
+        "assignee": "Juan Pérez",
+        "priority": "High"
+      },
+      {
+        "id": "task-2",
+        "title": "Diseñar estructura del proyecto",
+        "description": "Definir módulos, componentes y servicios necesarios",
+        "assignee": "Ana Gómez",
+        "priority": "Medium"
+      },
+      {
+        "id": "task-5",
+        "title": "Configurar autenticación",
+        "description": "Investigar opciones de autenticación y definir la estrategia",
+        "assignee": "Luis Herrera",
+        "priority": "High"
+      }
+    ]
+  },
+  {
+    "id": "in-progress",
+    "title": "In Progress",
+    "tickets": [
+      {
+        "id": "task-3",
+        "title": "Crear componentes básicos",
+        "description": "Desarrollar los componentes iniciales del sistema",
+        "assignee": "Carlos López",
+        "priority": "High"
+      },
+      {
+        "id": "task-7",
+        "title": "Implementar API REST",
+        "description": "Desarrollar el backend con NestJS y configurar endpoints",
+        "assignee": "Ricardo Fernández",
+        "priority": "High"
+      },
+      {
+        "id": "task-8",
+        "title": "Crear el sistema de drag and drop",
+        "description": "Implementar funcionalidad de arrastrar y soltar con Angular CDK",
+        "assignee": "Sofía Martínez",
+        "priority": "Medium"
+      }
+    ]
+  },
+  {
+    "id": "done",
+    "title": "Done",
+    "tickets": [
+      {
+        "id": "task-4",
+        "title": "Definir requerimientos",
+        "description": "Reunión con el equipo para establecer alcance del proyecto",
+        "assignee": "María Rodríguez",
+        "priority": "Low"
+      },
+      {
+        "id": "task-9",
+        "title": "Configurar repositorio Git",
+        "description": "Crear repositorio en GitHub y establecer buenas prácticas",
+        "assignee": "Fernando Ríos",
+        "priority": "Low"
+      },
+      {
+        "id": "task-10",
+        "title": "Definir arquitectura de software",
+        "description": "Establecer patrones de diseño y buenas prácticas de código",
+        "assignee": "Elena Castro",
+        "priority": "High"
+      }
+    ]
+  }
+]

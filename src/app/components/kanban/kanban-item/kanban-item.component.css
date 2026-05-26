@@ -1,0 +1,34 @@
+.title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 13px;
+  color: #555;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* colores simples sin Tailwind obligatorio */
+.bg-yellow-200 {
+  background: #fde68a;
+}
+
+.bg-red-200 {
+  background: #fca5a5;
+}
+
+.bg-green-200 {
+  background: #86efac;
+}

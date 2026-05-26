@@ -1,0 +1,48 @@
+<div class="board-container">
+
+  <!-- 🔥 COLUMNAS (DRAG HORIZONTAL) -->
+  <div
+    class="board"
+    cdkDropList
+    cdkDropListOrientation="horizontal"
+    [cdkDropListData]="columns"
+    (cdkDropListDropped)="dropColumn($event)"
+  >
+
+    <!-- 🔥 COLUMNAS -->
+    <div class="column" *ngFor="let c of columns" cdkDrag>
+
+      <app-kanban-column>
+        <!-- ================= HEADER ================= -->
+        <div class="column-header">
+          <!-- 🔥 SOLO ESTE BOTÓN MUEVE LA COLUMNA -->
+          <div class="drag-handle-col" cdkDragHandle>⋮⋮</div>
+          <h2 class="column-title">{{ c.title }}</h2>
+        </div>
+
+        <!-- ================= BODY (TICKETS) ================= -->
+        <div class="items"
+          cdkDropList
+          [id]="c.id"
+          [cdkDropListData]="c.tickets"
+          [cdkDropListConnectedTo]="connectedTaskLists"
+          (cdkDropListDropped)="dropTicket($event)"
+        >
+
+          <!-- 🔥 TICKETS -->
+          <div *ngFor="let t of c.tickets" class="kanban-card" cdkDrag>
+            <!-- 🔥 SOLO ESTE HANDLE MUEVE LA CARD -->
+            <app-kanban-item [item]="t">
+              <div class="drag-handle-card" cdkDragHandle>⋮⋮</div>
+            </app-kanban-item>
+          </div>
+
+          <!-- 🔥 EMPTY STATE -->
+          <div class="empty-placeholder" *ngIf="!c.tickets.length">
+            Suelta aquí
+          </div>
+        </div>
+      </app-kanban-column>
+    </div>
+  </div>
+</div>

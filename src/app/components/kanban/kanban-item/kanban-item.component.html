@@ -1,0 +1,19 @@
+<div class="kanban-card">
+
+  <ng-content></ng-content>
+
+  <p class="title">
+    {{ item.title }}
+  </p>
+
+  <p class="description">
+    {{ item.description }}
+  </p>
+
+  <div class="footer">
+    <div class="badge" [ngClass]="color">
+      {{ statusText }}
+    </div>
+  </div>
+
+</div>

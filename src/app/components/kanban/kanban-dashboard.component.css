@@ -1,0 +1,133 @@
+.board-container {
+  max-width: 1000px;
+  margin: 60px auto;
+}
+
+.empty-placeholder {
+  height: 80px;
+  align-items: center;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  color: #999;
+  display: flex;
+  font-size: 14px;
+  inset: 0;
+  justify-content: center;
+}
+
+/* 🔥 IMPORTANTE: scroll horizontal para drag de columnas */
+.board {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  align-items: flex-start;
+}
+
+/* 🔥 columna estable para CDK */
+.column {
+  flex: 0 0 280px; /* en vez de flex:1 */
+  background: #f3f4f6;
+  padding: 16px;
+  border-radius: 12px;
+  border-right: 1px solid #ddd;
+  min-height: 200px; /* clave para drop */
+  will-change: transform;
+
+  &.cdk-drop-list-receiving {
+    outline: 2px dashed #bbb;
+  }
+}
+
+/* última columna sin borde */
+.column:last-child {
+  border-right: none;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.column-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 120px;
+  padding-bottom: 10px;
+}
+
+.kanban-card {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* draggable item */
+.drag-handle-card,
+.drag-handle-col {
+  font-size: 2rem;
+  cursor: grab;
+  width: fit-content;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &.cdk-drag.cdk-drag-placeholder {
+    cursor: grabbing;
+  }
+}
+
+.drag-handle-card {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  top: 0;
+  font-size: 1.25rem;
+  left: 100%;
+  text-align: center;
+  align-content: center;
+  transform: translate(-50%, -50%);
+}
+
+
+/* 🔥 CDK DRAG VISUAL FIXES */
+.cdk-drag-preview {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.cdk-drag-placeholder {
+  opacity: 0.3;
+  cursor: grabbing;
+}
+
+.cdk-drag-animating {
+  transition: transform 150ms ease;
+}
+
+/* smooth drop animation */
+.items.cdk-drop-list-dragging .drag-wrapper:not(.cdk-drag-placeholder) {
+  transition: transform 150ms ease;
+}
+
+.cdk-drag:not(.cdk-drag-dragging) .drag-handle-card {
+  cursor: grab;
+}
+
+/* .cdk-drag.cdk-drag-dragging .drag-handle-card {
+  cursor: grabbing;
+} */

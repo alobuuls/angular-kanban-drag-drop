@@ -1,0 +1,31 @@
+.item {
+  background-color: #c3070723;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  user-select: none;
+}
+
+.item:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.draggable {
+  cursor: grab;
+  font-size: 2rem;
+  display: block;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &.cdk-drag.cdk-placeholder {
+    cursor: grabbing;
+  }
+}
+
+.cdk-placeholder {
+  opacity: 0.3;
+}
