@@ -1,27 +1,135 @@
-# DragAndDrop
+# 🚀 Angular Kanban Drag & Drop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
+Aplicación desarrollada en **Angular 12** que implementa un tablero tipo Kanban con funcionalidad de drag & drop utilizando **Angular CDK**.
 
-## Development server
+Permite mover columnas y tareas de forma dinámica dentro de un sistema visual tipo board.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## ⚙️ Requisitos del sistema
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Antes de ejecutar el proyecto, asegúrate de tener instalado:
 
-## Build
+- 📦 **Node.js:** `v14.x` o `v16.x` *(preferiblemente `v24.13.0`)*
+- 📦 **npm:** `v6+`
+- 🅰️ **Angular CLI:** `v12.x`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## 🔍 Verificar versiones instaladas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ejecuta en la terminal:
 
-## Running end-to-end tests
+```bash
+node -v
+npm -v
+ng version
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 🚀 Instalación del proyecto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 1️⃣ Clonar el repositorio
+
+```bash
+git clone <URL_DEL_REPO>
+cd angular-kanban-drag-drop
+```
+
+### 2️⃣ Instalar dependencias
+
+```bash
+npm install
+```
+
+---
+
+## ▶️ Ejecutar el proyecto
+
+```bash
+ng serve
+```
+
+Luego abre en tu navegador:
+
+```bash
+http://localhost:4200
+```
+
+---
+
+## 🧠 Arquitectura del proyecto
+
+Este proyecto está basado en componentes modulares.
+
+### 📦 KanbanDashboardComponent
+
+- Controla el estado del board
+- Maneja columnas y tareas
+- Implementa drag & drop entre columnas
+
+### 📦 KanbanColumnComponent
+
+- Renderiza cada columna del tablero
+- Contiene las tareas asociadas
+
+### 📦 KanbanItemComponent
+
+- Representa cada tarea
+- Muestra título, descripción y prioridad
+
+---
+
+## ⚙️ Funcionalidades principales
+
+- 📦 Reordenar columnas *(drag horizontal)*
+- 📌 Mover tareas entre columnas
+- 🔄 Reordenar tareas dentro de la misma columna
+- 🎯 Drag handle para columnas y cards
+- 🧩 UI tipo Kanban *(estilo Trello)*
+- 📁 Datos en memoria *(JSON mock)*
+
+---
+
+## 🧰 Tecnologías utilizadas
+
+- 🅰️ Angular 12
+- 🧩 Angular CDK Drag & Drop
+- ⚡ TypeScript
+- 🎨 CSS puro
+- 📦 JSON local data
+
+---
+
+## 📁 Estructura del proyecto
+
+```bash
+src/app/
+├── components/
+│   ├── kanban/
+│   │   ├── kanban-dashboard/
+│   │   ├── kanban-column/
+│   │   └── kanban-item/
+│   ├── list/
+│   └── menu/
+├── interfaces/
+│   └── kanban.interface.ts
+```
+
+---
+
+## 🔥 Conceptos implementados
+
+- Angular CDK Drag & Drop
+- Componentes reutilizables
+- Comunicación con `@Input`
+- Manejo de arrays en memoria
+- Transferencia entre listas
+- Arquitectura modular
+
+---
+
+## 📄 Licencia
+
+Este proyecto es de uso educativo y forma parte de un portafolio personal.
