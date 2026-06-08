@@ -1,24 +1,67 @@
-# 🚀 Angular Kanban Drag & Drop
+<h1 align="center">📋 Angular Kanban Drag & Drop</h1>
 
-Aplicación desarrollada en **Angular 12** que implementa un tablero tipo Kanban con funcionalidad de drag & drop utilizando **Angular CDK**.
+<p align="center">
+  <img src="https://img.shields.io/badge/Angular-12-DD0031?logo=angular&logoColor=white" alt="Angular" />
+  <img src="https://img.shields.io/badge/TypeScript-4.x-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Angular%20CDK-Drag%20%26%20Drop-blue" alt="Angular CDK" />
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen" alt="Completed" />
+</p>
 
-Permite mover columnas y tareas de forma dinámica dentro de un sistema visual tipo board.
+<p align="center">
+  <a href="https://github.com/alobuuls/angular-kanban-drag-drop" target="_blank"><img src="https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white" alt="Repository" /></a>
+  <a href="https://github.com/alobuuls/angular-kanban-drag-drop/stargazers" target="_blank"><img src="https://img.shields.io/github/stars/alobuuls/angular-kanban-drag-drop?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/alobuuls/angular-kanban-drag-drop/commits/main" target="_blank"><img src="https://img.shields.io/github/last-commit/alobuuls/angular-kanban-drag-drop" alt="Last Commit" /></a>
+</p>
 
 ---
 
-## ⚙️ Requisitos del sistema
+## 📑 Table of Contents
 
-Antes de ejecutar el proyecto, asegúrate de tener instalado:
+* [📋 Angular Kanban Drag & Drop](#-angular-kanban-drag--drop)
 
-- 📦 **Node.js:** `v14.x` o `v16.x` *(preferiblemente `v24.13.0`)*
-- 📦 **npm:** `v6+`
-- 🅰️ **Angular CLI:** `v12.x`
+  * [🌐 Live Demo](#-live-demo)
+  * [📖 Description](#-description)
+  * [⚙️ System Requirements](#️-system-requirements)
+  * [🚀 Project Installation](#-project-installation)
+  * [▶️ Run the Project](#️-run-the-project)
+  * [🧠 Project Architecture](#-project-architecture)
+  * [✨ Features](#-features)
+  * [🛠 Technologies Used](#-technologies-used)
+  * [📁 Project Structure](#-project-structure)
+  * [🔥 Best Practices Implemented](#-best-practices-implemented)
+  * [🎯 Project Goal](#-project-goal)
+  * [📄 License](#-license)
 
 ---
 
-## 🔍 Verificar versiones instaladas
+## 🌐 Live Demo
 
-Ejecuta en la terminal:
+🔗 https://alobuuls.github.io/angular-kanban-drag-drop/
+
+---
+
+## 📖 Description
+
+> [!NOTE]
+> Angular 12 application that implements a Kanban board with Drag & Drop functionality using Angular CDK.
+
+The project allows users to reorder columns, move tasks between columns, and organize information visually through a Trello-style interface while demonstrating reusable components, modular architecture, and drag-and-drop interactions.
+
+---
+
+## ⚙️ System Requirements
+
+Before running the project, make sure you have installed:
+
+* 📦 **Node.js:** `v12.14.x – v14.x` *(recommended: v14.21.3 LTS)*
+* 📦 **npm:** `v6+`
+* 🅰️ **Angular CLI:** `v12.x`
+
+---
+
+## 🔍 Verify Installed Versions
+
+Run the following commands in your terminal:
 
 ```bash
 node -v
@@ -28,16 +71,17 @@ ng version
 
 ---
 
-## 🚀 Instalación del proyecto
+## 🚀 Project Installation
 
-### 1️⃣ Clonar el repositorio
+### 1️⃣ Clone the repository
 
 ```bash
-git clone <URL_DEL_REPO>
+git clone git@github.com:alobuuls/angular-kanban-drag-drop.git
+
 cd angular-kanban-drag-drop
 ```
 
-### 2️⃣ Instalar dependencias
+### 2️⃣ Install dependencies
 
 ```bash
 npm install
@@ -45,91 +89,170 @@ npm install
 
 ---
 
-## ▶️ Ejecutar el proyecto
+## ▶️ Run the Project
+
+Start the development server:
 
 ```bash
 ng serve
 ```
 
-Luego abre en tu navegador:
+Then open:
 
-```bash
+```text
 http://localhost:4200
 ```
 
 ---
 
-## 🧠 Arquitectura del proyecto
+## 🧠 Project Architecture
 
-Este proyecto está basado en componentes modulares.
+The application follows a modular component-based architecture focused on Drag & Drop interactions.
 
-### 📦 KanbanDashboardComponent
+### 📦 Kanban Dashboard Component
 
-- Controla el estado del board
-- Maneja columnas y tareas
-- Implementa drag & drop entre columnas
+Responsible for:
 
-### 📦 KanbanColumnComponent
+* Board state management
+* Column organization
+* Drag & Drop orchestration
+* Task movement handling
+* Data synchronization
 
-- Renderiza cada columna del tablero
-- Contiene las tareas asociadas
+### 📦 Kanban Column Component
 
-### 📦 KanbanItemComponent
+Responsible for:
 
-- Representa cada tarea
-- Muestra título, descripción y prioridad
+* Column rendering
+* Task grouping
+* Drop zone management
+* Column interactions
+
+### 📦 Kanban Item Component
+
+Responsible for:
+
+* Task rendering
+* Task information display
+* Drag item behavior
+* UI consistency
+
+### 📦 Menu Component
+
+Responsible for:
+
+* Navigation rendering
+* Application structure
+* User interaction entry points
+
+### 📦 Interfaces
+
+Responsible for:
+
+* Kanban data contracts
+* Type safety
+* Board structure definition
 
 ---
 
-## ⚙️ Funcionalidades principales
+## ✨ Features
 
-- 📦 Reordenar columnas *(drag horizontal)*
-- 📌 Mover tareas entre columnas
-- 🔄 Reordenar tareas dentro de la misma columna
-- 🎯 Drag handle para columnas y cards
-- 🧩 UI tipo Kanban *(estilo Trello)*
-- 📁 Datos en memoria *(JSON mock)*
-
----
-
-## 🧰 Tecnologías utilizadas
-
-- 🅰️ Angular 12
-- 🧩 Angular CDK Drag & Drop
-- ⚡ TypeScript
-- 🎨 CSS puro
-- 📦 JSON local data
+* 📋 Kanban board interface
+* 🧩 Angular CDK Drag & Drop
+* ↔️ Column reordering
+* 📌 Task movement between columns
+* 🔄 Task reordering inside columns
+* 🎯 Drag handles for tasks and columns
+* 📦 Local JSON data source
+* 🧠 Dynamic board updates
+* 🎨 Trello-style user interface
+* 🚀 Modular component architecture
 
 ---
 
-## 📁 Estructura del proyecto
+## 🛠 Technologies Used
 
-```bash
-src/app/
-├── components/
-│   ├── kanban/
-│   │   ├── kanban-dashboard/
-│   │   ├── kanban-column/
-│   │   └── kanban-item/
-│   ├── list/
-│   └── menu/
-├── interfaces/
-│   └── kanban.interface.ts
+| Technology              | Purpose                   |
+| ----------------------- | ------------------------- |
+| Angular 12              | Framework                 |
+| TypeScript              | Application Logic         |
+| Angular CDK Drag & Drop | Drag & Drop Functionality |
+| JSON Data               | Mock Data Source          |
+| HTML5                   | Structure                 |
+| CSS3                    | Styling                   |
+
+---
+
+## 📁 Project Structure
+
+```text
+angular-kanban-drag-drop/
+
+├── src/
+│
+├── app/
+│   │
+│   ├── components/
+│   │   ├── kanban/
+│   │   │   ├── kanban-dashboard.component.*
+│   │   │   ├── kanban-column/
+│   │   │   └── kanban-item/
+│   │   │
+│   │   ├── list/
+│   │   └── menu/
+│   │
+│   ├── interfaces/
+│   │   └── kanban.interface.ts
+│   │
+│   ├── app.component.ts
+│   └── app.module.ts
+│
+├── assets/
+│   └── json/
+│       └── data.json
+│
+├── angular.json
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
 
 ---
 
-## 🔥 Conceptos implementados
+## 🔥 Best Practices Implemented
 
-- Angular CDK Drag & Drop
-- Componentes reutilizables
-- Comunicación con `@Input`
-- Manejo de arrays en memoria
-- Transferencia entre listas
-- Arquitectura modular
+* Component-based architecture
+* Separation of concerns
+* Strong typing with TypeScript interfaces
+* Angular CDK integration
+* Reusable UI components
+* Modular project organization
+* Drag & Drop abstraction
+* Scalable board structure
+* Data-driven UI rendering
+* Maintainable code organization
 
 ---
 
-## 📄 Licencia
+## 🎯 Project Goal
 
-Este proyecto es de uso educativo y forma parte de un portafolio personal.
+Practice and strengthen Angular UI interaction concepts through the implementation of a Kanban board application:
+
+* Angular CDK
+* Drag & Drop
+* Component Communication
+* TypeScript Interfaces
+* Reusable Components
+* Dynamic Rendering
+* State Management
+* Front-End Architecture
+* User Experience Design
+* Modular Development
+
+---
+
+## 📄 License
+
+This project is intended for educational and portfolio purposes.
+
+Created by **Alondra Francisco**.
